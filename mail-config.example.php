@@ -10,8 +10,8 @@ return [
     'smtp_port' => 465,
     // 'ssl' para el puerto 465, 'tls' para el 587
     'smtp_secure' => 'ssl',
-    'smtp_user' => 'contacto@emilianonewen.com',
+    'smtp_user' => 'administracion@emilianonewen.com',
     'smtp_pass' => 'TU_CONTRASEÑA_AQUI',
-    'mail_to' => 'contacto@emilianonewen.com',
+    'mail_to' => 'administracion@emilianonewen.com',
     'mail_from_name' => 'Formulario emilianonewen.com',
 ];
