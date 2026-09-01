@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emiliano Newen — Full Stack Developer</title>
+<meta name="description" content="Emiliano Newen — Analista de Sistemas y desarrollador Full Stack. Sistemas administrativos, APIs, integraciones y automatización.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo">
+        <span class="dot pulse"></span>
+        <span>emiliano<span class="dim">.newen</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#about" data-i18n="navAbout">Sobre mí</a>
+        <a href="#process" data-i18n="navProcess">Cómo trabajo</a>
+        <a href="#work" data-i18n="navWork">Proyectos</a>
+        <a href="#stack" data-i18n="navStack">Tecnologías</a>
+        <a href="#contact" data-i18n="navContact">Contacto</a>
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top" class="hero">
+    <div>
+      <div class="badge">
+        <span class="dot pulse green"></span>
+        <span data-i18n="badge">Abierto a oportunidades</span>
+      </div>
+      <h1 class="hero-title">Full Stack<br><span class="dim">Developer</span></h1>
+      <p class="hero-lead" data-i18n="heroLead">Construyo aplicaciones web, APIs y sistemas administrativos que se usan todos los días en producción.</p>
+      <p class="hero-role">Emiliano Newen · Analista de Sistemas · Bahía Blanca, AR</p>
+
+      <div class="cta-row">
+        <a href="#work" class="btn btn-primary" data-i18n="ctaWork">Ver proyectos</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="ctaContact">Hablemos</a>
+      </div>
+
+      <div class="social-row">
+        <a href="https://github.com/GayoneEmiliano/" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/gayone-emiliano/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="mailto:contacto@emilianonewen.com">contacto@emilianonewen.com</a>
+      </div>
+    </div>
+
+    <div class="canvas-card">
+      <div class="canvas-topbar">
+        <span>system-map.ts</span>
+        <span class="dots"><span></span><span></span><span class="accent-dot"></span></span>
+      </div>
+      <canvas id="graphCanvas" class="graph-canvas" aria-label="Diagrama animado de tecnologías"></canvas>
+      <div class="canvas-hint">
+        <span class="accent-text">▸</span>
+        <span data-i18n="canvasHint">arrastrá el mouse: los nodos reaccionan</span><span class="caret">_</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section" data-reveal>
+    <div class="eyebrow">01 — <span data-i18n="navAbout">Sobre mí</span></div>
+    <div class="about-grid">
+      <div>
+        <h2 class="section-title" data-i18n="aboutTitle">No hago sitios web: desarrollo sistemas que la gente usa para trabajar.</h2>
+        <p class="body-text" data-i18n="aboutP1"></p>
+        <p class="body-text" data-i18n="aboutP2"></p>
+      </div>
+      <div id="factsList" class="facts-list"></div>
+    </div>
+  </section>
+
+  <section id="process" class="section" data-reveal>
+    <div class="eyebrow">02 — <span data-i18n="navProcess">Cómo trabajo</span></div>
+    <h2 class="section-title narrow" data-i18n="processTitle">Analizo cómo trabaja tu empresa, lo digitalizo y lo automatizo.</h2>
+    <div id="stepsList" class="steps-grid"></div>
+  </section>
+
+  <section id="work" class="section" data-reveal>
+    <div class="work-head">
+      <div class="eyebrow" style="margin:0;">03 — <span data-i18n="navWork">Proyectos</span></div>
+      <div class="mono muted-3" data-i18n="workNote">// casos seleccionados</div>
+    </div>
+    <div id="projectsList" class="projects-list"></div>
+  </section>
+
+  <section id="stack" class="section" data-reveal>
+    <div class="eyebrow">04 — <span data-i18n="navStack">Tecnologías</span></div>
+    <div id="stackList" class="stack-grid"></div>
+  </section>
+
+  <section id="contact" class="section contact-section" data-reveal>
+    <div class="eyebrow">05 — <span data-i18n="navContact">Contacto</span></div>
+    <h2 class="contact-title"><span data-i18n="contactTitle">¿Tenés un proyecto</span><br><span class="accent-text" data-i18n="contactTitle2">en mente? Hablemos.</span></h2>
+    <p class="body-text contact-lead" data-i18n="contactLead">Escribime por mail o LinkedIn. Respondo rápido y con gusto cuento en detalle cómo trabajo.</p>
+    <div class="cta-row">
+      <a href="mailto:contacto@emilianonewen.com" class="btn btn-primary" data-i18n="ctaEmail">Enviar un mail</a>
+      <a href="https://www.linkedin.com/in/gayone-emiliano/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+      <a href="https://github.com/GayoneEmiliano/" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>emilianonewen.com</span>
+    <span data-i18n="footer">Diseñado y desarrollado por Emiliano Newen · 2026</span>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
