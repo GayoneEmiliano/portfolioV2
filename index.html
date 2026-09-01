@@ -103,10 +103,33 @@
     <div class="eyebrow">05 — <span data-i18n="navContact">Contacto</span></div>
     <h2 class="contact-title"><span data-i18n="contactTitle">¿Tenés un proyecto</span><br><span class="accent-text" data-i18n="contactTitle2">en mente? Hablemos.</span></h2>
     <p class="body-text contact-lead" data-i18n="contactLead">Escribime por mail o LinkedIn. Respondo rápido y con gusto cuento en detalle cómo trabajo.</p>
-    <div class="cta-row">
-      <a href="mailto:contacto@emilianonewen.com" class="btn btn-primary" data-i18n="ctaEmail">Enviar un mail</a>
-      <a href="https://www.linkedin.com/in/gayone-emiliano/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
-      <a href="https://github.com/GayoneEmiliano/" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+
+    <form id="contactForm" class="contact-form" action="contact.php" method="POST" novalidate>
+      <div class="form-row">
+        <label class="field">
+          <span class="field-label" data-i18n="formName">Nombre</span>
+          <input type="text" name="name" required maxlength="150" autocomplete="name">
+        </label>
+        <label class="field">
+          <span class="field-label" data-i18n="formEmail">Email</span>
+          <input type="email" name="email" required maxlength="200" autocomplete="email">
+        </label>
+      </div>
+      <label class="field">
+        <span class="field-label" data-i18n="formMessage">Mensaje</span>
+        <textarea name="message" rows="5" required maxlength="5000"></textarea>
+      </label>
+      <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" data-i18n="formSubmit">Enviar mensaje</button>
+        <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
+      </div>
+    </form>
+
+    <div class="social-row contact-social">
+      <a href="https://www.linkedin.com/in/gayone-emiliano/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/GayoneEmiliano/" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="mailto:contacto@emilianonewen.com">contacto@emilianonewen.com</a>
     </div>
   </section>
 
