@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,14 +19,13 @@
     <div class="header-inner">
       <a href="#top" class="logo">
         <span class="dot pulse"></span>
-        <span>emiliano<span class="dim">.newen</span></span>
+        <span>Emiliano Newen</span>
       </a>
       <nav class="nav">
         <a href="#about" data-i18n="navAbout">Sobre mí</a>
         <a href="#process" data-i18n="navProcess">Cómo trabajo</a>
         <a href="#work" data-i18n="navWork">Proyectos</a>
         <a href="#stack" data-i18n="navStack">Tecnologías</a>
-        <a href="#contact" data-i18n="navContact">Contacto</a>
         <div class="lang-toggle" role="group" aria-label="Idioma / Language">
           <button type="button" class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
           <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
@@ -36,42 +35,34 @@
   </header>
 
   <section id="top" class="hero">
-    <div>
-      <div class="badge">
-        <span class="dot pulse green"></span>
-        <span data-i18n="badge">Abierto a oportunidades</span>
-      </div>
-      <h1 class="hero-title">Full Stack<br><span class="dim">Developer</span></h1>
-      <p class="hero-lead" data-i18n="heroLead">Construyo aplicaciones web, APIs y sistemas administrativos que se usan todos los días en producción.</p>
-      <p class="hero-role">Emiliano Newen · Analista de Sistemas · Bahía Blanca, AR</p>
-
-      <div class="cta-row">
-        <a href="#work" class="btn btn-primary" data-i18n="ctaWork">Ver proyectos</a>
-        <a href="#contact" class="btn btn-ghost" data-i18n="ctaContact">Hablemos</a>
-      </div>
-
-      <div class="social-row">
-        <a href="https://github.com/GayoneEmiliano/" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/gayone-emiliano/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="mailto:administracion@emilianonewen.com">administracion@emilianonewen.com</a>
-      </div>
+    <div class="badge">
+      <span class="dot pulse green"></span>
+      <span data-i18n="badge">Abierto a oportunidades</span>
     </div>
+    <h1 class="hero-title">
+      <span data-i18n="h1a">Sistemas que hacen funcionar</span>
+      <span class="dim" data-i18n="h1b">tu empresa.</span>
+    </h1>
+    <p class="hero-lead" data-i18n="heroLead"></p>
+    <div class="cta-row">
+      <a href="#work" class="btn btn-primary" data-i18n="ctaWork">Ver proyectos</a>
+      <a href="mailto:administracion@emilianonewen.com" class="btn btn-ghost" data-i18n="ctaContact">Hablemos</a>
+    </div>
+    <p class="hero-role mono">Analista de Sistemas · Full Stack Ssr · Bahía Blanca, AR</p>
+  </section>
 
+  <section class="canvas-section">
     <div class="canvas-card">
       <div class="canvas-topbar">
         <span>system-map.ts</span>
-        <span class="dots"><span></span><span></span><span class="accent-dot"></span></span>
+        <span data-i18n="canvasHint">movés el mouse, los nodos reaccionan</span>
       </div>
       <canvas id="graphCanvas" class="graph-canvas" aria-label="Diagrama animado de tecnologías"></canvas>
-      <div class="canvas-hint">
-        <span class="accent-text">▸</span>
-        <span data-i18n="canvasHint">arrastrá el mouse: los nodos reaccionan</span><span class="caret">_</span>
-      </div>
     </div>
   </section>
 
   <section id="about" class="section" data-reveal>
-    <div class="eyebrow">01 — <span data-i18n="navAbout">Sobre mí</span></div>
+    <div class="eyebrow" data-i18n="navAbout">Sobre mí</div>
     <div class="about-grid">
       <div>
         <h2 class="section-title" data-i18n="aboutTitle">No hago sitios web: desarrollo sistemas que la gente usa para trabajar.</h2>
@@ -82,56 +73,68 @@
     </div>
   </section>
 
-  <section id="process" class="section" data-reveal>
-    <div class="eyebrow">02 — <span data-i18n="navProcess">Cómo trabajo</span></div>
-    <h2 class="section-title narrow" data-i18n="processTitle">Analizo cómo trabaja tu empresa, lo digitalizo y lo automatizo.</h2>
-    <div id="stepsList" class="steps-grid"></div>
+  <section id="process" class="section section-tinted" data-reveal>
+    <div class="section-inner">
+      <div class="eyebrow" data-i18n="navProcess">Cómo trabajo</div>
+      <h2 class="section-title narrow" data-i18n="processTitle">Analizo cómo trabaja tu empresa, lo digitalizo y lo automatizo.</h2>
+      <div id="stepsList" class="steps-grid"></div>
+    </div>
   </section>
 
   <section id="work" class="section" data-reveal>
     <div class="work-head">
-      <div class="eyebrow" style="margin:0;">03 — <span data-i18n="navWork">Proyectos</span></div>
+      <div>
+        <div class="eyebrow" data-i18n="navWork">Proyectos</div>
+        <h2 class="section-title tight" data-i18n="workTitle">Casos de trabajo</h2>
+      </div>
       <div class="mono muted-3" data-i18n="workNote">// casos seleccionados</div>
     </div>
     <div id="projectsList" class="projects-list"></div>
   </section>
 
-  <section id="stack" class="section" data-reveal>
-    <div class="eyebrow">04 — <span data-i18n="navStack">Tecnologías</span></div>
-    <div id="stackList" class="stack-grid"></div>
+  <section id="stack" class="section section-tinted" data-reveal>
+    <div class="section-inner">
+      <div class="eyebrow" data-i18n="navStack">Tecnologías</div>
+      <h2 class="section-title tight" data-i18n="stackTitle">Con qué construyo</h2>
+      <div id="stackList" class="stack-grid"></div>
+    </div>
   </section>
 
-  <section id="contact" class="section contact-section" data-reveal>
-    <div class="eyebrow">05 — <span data-i18n="navContact">Contacto</span></div>
-    <h2 class="contact-title"><span data-i18n="contactTitle">¿Tenés un proyecto</span><br><span class="accent-text" data-i18n="contactTitle2">en mente? Hablemos.</span></h2>
-    <p class="body-text contact-lead" data-i18n="contactLead">Escribime por mail o LinkedIn. Respondo rápido y con gusto cuento en detalle cómo trabajo.</p>
+  <section id="contact" class="section" data-reveal>
+    <div class="contact-card">
+      <h2 class="contact-title">
+        <span data-i18n="contactTitle">¿Tenés un proceso que se hace a mano?</span>
+        <span class="accent-text" data-i18n="contactTitle2">Hablemos.</span>
+      </h2>
+      <p class="contact-lead" data-i18n="contactLead">Escribime por mail o LinkedIn. Respondo rápido y con gusto cuento en detalle cómo trabajo.</p>
 
-    <form id="contactForm" class="contact-form" action="contact.php" method="POST" novalidate>
-      <div class="form-row">
+      <form id="contactForm" class="contact-form" action="contact.php" method="POST" novalidate>
+        <div class="form-row">
+          <label class="field">
+            <span class="field-label" data-i18n="formName">Nombre</span>
+            <input type="text" name="name" required maxlength="150" autocomplete="name">
+          </label>
+          <label class="field">
+            <span class="field-label" data-i18n="formEmail">Email</span>
+            <input type="email" name="email" required maxlength="200" autocomplete="email">
+          </label>
+        </div>
         <label class="field">
-          <span class="field-label" data-i18n="formName">Nombre</span>
-          <input type="text" name="name" required maxlength="150" autocomplete="name">
+          <span class="field-label" data-i18n="formMessage">Mensaje</span>
+          <textarea name="message" rows="5" required maxlength="5000"></textarea>
         </label>
-        <label class="field">
-          <span class="field-label" data-i18n="formEmail">Email</span>
-          <input type="email" name="email" required maxlength="200" autocomplete="email">
-        </label>
-      </div>
-      <label class="field">
-        <span class="field-label" data-i18n="formMessage">Mensaje</span>
-        <textarea name="message" rows="5" required maxlength="5000"></textarea>
-      </label>
-      <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary" data-i18n="formSubmit">Enviar mensaje</button>
-        <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
-      </div>
-    </form>
+        <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" data-i18n="formSubmit">Enviar mensaje</button>
+          <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
 
-    <div class="social-row contact-social">
-      <a href="https://www.linkedin.com/in/gayone-emiliano/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="https://github.com/GayoneEmiliano/" target="_blank" rel="noopener">GitHub ↗</a>
-      <a href="mailto:administracion@emilianonewen.com">administracion@emilianonewen.com</a>
+      <div class="contact-social">
+        <a href="mailto:administracion@emilianonewen.com">administracion@emilianonewen.com</a>
+        <a href="https://www.linkedin.com/in/gayone-emiliano/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/GayoneEmiliano/" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </section>
 

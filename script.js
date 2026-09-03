@@ -8,14 +8,15 @@
       navAbout: "Sobre mí",
       navWork: "Proyectos",
       navStack: "Tecnologías",
-      navContact: "Contacto",
       navProcess: "Cómo trabajo",
       badge: "Abierto a oportunidades",
+      h1a: "Sistemas que hacen funcionar",
+      h1b: "tu empresa.",
       heroLead:
-        "Construyo aplicaciones web, APIs y sistemas administrativos que se usan todos los días en producción.",
+        "Analizo cómo trabajás, lo digitalizo y lo automatizo. Aplicaciones web, APIs y sistemas internos que corren en producción todos los días.",
       ctaWork: "Ver proyectos",
       ctaContact: "Hablemos",
-      canvasHint: "arrastrá el mouse: los nodos reaccionan",
+      canvasHint: "movés el mouse, los nodos reaccionan",
       aboutTitle:
         "No hago sitios web: desarrollo sistemas que la gente usa para trabajar.",
       aboutP1:
@@ -24,6 +25,26 @@
         "Trabajo end-to-end: modelo la base de datos, escribo el backend y las APIs, armo la interfaz y después convivo con el sistema — soporte, debugging y mejoras con usuarios reales del otro lado. Ese ciclo completo es lo que más me interesa: entender el problema del negocio y dejarlo resuelto.",
       processTitle:
         "Analizo cómo trabaja tu empresa, lo digitalizo y lo automatizo.",
+      workTitle: "Casos de trabajo",
+      stackTitle: "Con qué construyo",
+      workNote: "// casos seleccionados",
+      lblProblem: "Problema",
+      lblSolution: "Solución",
+      lblResult: "Resultado",
+      contactTitle: "¿Tenés un proceso que se hace a mano?",
+      contactTitle2: "Hablemos.",
+      contactLead:
+        "Escribime por mail o LinkedIn. Respondo rápido y con gusto cuento en detalle cómo trabajo.",
+      formName: "Nombre",
+      formEmail: "Email",
+      formMessage: "Mensaje",
+      formSubmit: "Enviar mensaje",
+      formSending: "Enviando…",
+      formSuccess: "¡Mensaje enviado! Te responderé pronto.",
+      formErrorValidation: "Completá todos los campos con un email válido.",
+      formErrorGeneric:
+        "No se pudo enviar. Probá de nuevo o escribime por mail.",
+      footer: "Diseñado y desarrollado por Emiliano Newen · 2026",
       steps: [
         {
           n: "01",
@@ -41,28 +62,9 @@
           body: "Las tareas repetitivas pasan a correr solas —cargas, sincronizaciones, avisos, reportes— con registro y control de errores.",
         },
       ],
-      workNote: "// casos seleccionados",
-      lblProblem: "Problema",
-      lblSolution: "Solución",
-      lblResult: "Resultado",
-      contactTitle: "¿Tenés un proyecto",
-      contactTitle2: "en mente? Hablemos.",
-      contactLead:
-        "Escribime por mail o LinkedIn. Respondo rápido y con gusto cuento en detalle cómo trabajo.",
-      ctaEmail: "Enviar un mail",
-      formName: "Nombre",
-      formEmail: "Email",
-      formMessage: "Mensaje",
-      formSubmit: "Enviar mensaje",
-      formSending: "Enviando…",
-      formSuccess: "¡Mensaje enviado! Te responderé pronto.",
-      formErrorValidation: "Completá todos los campos con un email válido.",
-      formErrorGeneric:
-        "No se pudo enviar. Probá de nuevo o escribime por mail.",
-      footer: "Diseñado y desarrollado por Emiliano Newen · 2026",
       facts: [
         { k: "2022", v: "Full Stack en DM Group, Bahía Blanca" },
-        { k: "prod", v: "Sistemas internos y externos" },
+        { k: "prod", v: "Sistemas internos en uso diario, no demos" },
         { k: "stack", v: "PHP, Node, React/Next, MySQL/MariaDB" },
         { k: "foco", v: "APIs, integraciones, automatización, datos" },
       ],
@@ -129,14 +131,15 @@
       navAbout: "About",
       navWork: "Work",
       navStack: "Stack",
-      navContact: "Contact",
       navProcess: "How I work",
       badge: "Open to opportunities",
+      h1a: "Systems that keep",
+      h1b: "your company running.",
       heroLead:
-        "I build web apps, APIs and internal systems that run in production every day.",
+        "I analyze how you work, digitize it and automate it. Web apps, APIs and internal systems running in production every day.",
       ctaWork: "See projects",
       ctaContact: "Get in touch",
-      canvasHint: "move your mouse: the nodes react",
+      canvasHint: "move your mouse, the nodes react",
       aboutTitle: "I don't build websites — I build systems people work with.",
       aboutP1:
         "I'm a Systems Analyst and semi-senior Full Stack developer. Since 2022 I've been building and maintaining internal software at DM Group (Bahía Blanca): admin systems, third-party integrations and automations that keep daily operations running.",
@@ -144,6 +147,25 @@
         "I work end to end: I model the database, write the backend and APIs, build the interface — and then live with the system: support, debugging and improvements with real users on the other side. That full cycle is what I like most: understanding the business problem and actually solving it.",
       processTitle:
         "I analyze how your company works, digitize it and automate it.",
+      workTitle: "Selected work",
+      stackTitle: "What I build with",
+      workNote: "// selected cases",
+      lblProblem: "Problem",
+      lblSolution: "Solution",
+      lblResult: "Outcome",
+      contactTitle: "Still doing it by hand?",
+      contactTitle2: "Let's talk.",
+      contactLead:
+        "Reach me by email or LinkedIn. I reply fast and I'm happy to walk you through how I work.",
+      formName: "Name",
+      formEmail: "Email",
+      formMessage: "Message",
+      formSubmit: "Send message",
+      formSending: "Sending…",
+      formSuccess: "Message sent! I'll get back to you soon.",
+      formErrorValidation: "Fill in all fields with a valid email.",
+      formErrorGeneric: "Couldn't send it. Try again or email me directly.",
+      footer: "Designed & built by Emiliano Newen · 2026",
       steps: [
         {
           n: "01",
@@ -161,30 +183,9 @@
           body: "Repetitive tasks start running on their own — imports, syncs, alerts, reports — with logging and error handling.",
         },
       ],
-      workNote: "// selected cases",
-      lblProblem: "Problem",
-      lblSolution: "Solution",
-      lblResult: "Outcome",
-      contactTitle: "Got a project",
-      contactTitle2: "in mind? Let's talk.",
-      contactLead:
-        "Reach me by email or LinkedIn. I reply fast and I'm happy to walk you through how I work.",
-      ctaEmail: "Send an email",
-      formName: "Name",
-      formEmail: "Email",
-      formMessage: "Message",
-      formSubmit: "Send message",
-      formSending: "Sending…",
-      formSuccess: "Message sent! I'll get back to you soon.",
-      formErrorValidation: "Fill in all fields with a valid email.",
-      formErrorGeneric: "Couldn't send it. Try again or email me directly.",
-      footer: "Designed & built by Emiliano Newen · 2026",
       facts: [
         { k: "2022", v: "Full Stack at DM Group, Bahía Blanca" },
-        {
-          k: "prod",
-          v: "Internal and external systems in daily use, not demos",
-        },
+        { k: "prod", v: "Internal systems in daily use, not demos" },
         { k: "stack", v: "PHP, Node, React/Next, MySQL/MariaDB" },
         { k: "focus", v: "APIs, integrations, automation, data" },
       ],
@@ -318,10 +319,7 @@
     list.innerHTML = "";
     t.steps.forEach(function (s) {
       var card = el("div", "step-card");
-      var head = el("div", "step-head");
-      head.appendChild(el("span", "accent-text", s.n));
-      head.appendChild(el("span", "rule"));
-      card.appendChild(head);
+      card.appendChild(el("div", "step-num", s.n));
       card.appendChild(el("h3", null, s.title));
       card.appendChild(el("p", null, s.body));
       list.appendChild(card);
@@ -375,10 +373,7 @@
     if (list.childElementCount) return;
     STACK.forEach(function (group) {
       var card = el("div", "stack-card");
-      var head = el("div", "stack-head");
-      head.appendChild(el("span", "dot"));
-      head.appendChild(el("span", null, group.name));
-      card.appendChild(head);
+      card.appendChild(el("div", "stack-head", group.name));
       var items = el("div", "stack-items");
       group.items.forEach(function (item) {
         items.appendChild(el("span", "stack-pill", item));
@@ -436,7 +431,7 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.1, rootMargin: "0px 0px -6% 0px" },
     );
     sections.forEach(function (s) {
       io.observe(s);
@@ -476,8 +471,8 @@
       var r = cv.getBoundingClientRect();
       W = r.width;
       H = r.height;
-      cv.width = W * dpr;
-      cv.height = H * dpr;
+      cv.width = Math.max(1, W * dpr);
+      cv.height = Math.max(1, H * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
     resize();
@@ -528,7 +523,7 @@
       EDGES.forEach(function (edge) {
         var p1 = pos[edge[0]],
           p2 = pos[edge[1]];
-        ctx.strokeStyle = "rgba(255,255,255,.09)";
+        ctx.strokeStyle = "rgba(0,0,0,.10)";
         ctx.lineWidth = 1;
         ctx.beginPath();
         ctx.moveTo(p1.x, p1.y);
@@ -537,9 +532,9 @@
         var k = (t * 0.22 + (edge[0] + edge[1]) * 0.11) % 1;
         var px = p1.x + (p2.x - p1.x) * k,
           py = p1.y + (p2.y - p1.y) * k;
-        ctx.fillStyle = alpha(0.85);
+        ctx.fillStyle = alpha(0.9);
         ctx.beginPath();
-        ctx.arc(px, py, 1.7, 0, Math.PI * 2);
+        ctx.arc(px, py, 1.8, 0, Math.PI * 2);
         ctx.fill();
       });
 
@@ -548,16 +543,15 @@
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fillStyle = hot
-          ? alpha(0.16)
+          ? alpha(0.14)
           : i === 4
-            ? alpha(0.1)
-            : "rgba(255,255,255,.03)";
+            ? alpha(0.08)
+            : "rgba(255,255,255,.92)";
         ctx.fill();
-        ctx.strokeStyle =
-          hot || i === 4 ? alpha(0.65) : "rgba(255,255,255,.14)";
+        ctx.strokeStyle = hot || i === 4 ? alpha(0.6) : "rgba(0,0,0,.12)";
         ctx.lineWidth = 1;
         ctx.stroke();
-        ctx.fillStyle = hot ? "#fff" : "rgba(231,233,238,.82)";
+        ctx.fillStyle = hot ? "#16181D" : "rgba(34,37,43,.8)";
         ctx.font =
           "500 " +
           Math.max(10, Math.min(12, W / 34)) +
