@@ -31,6 +31,7 @@
       lblProblem: "Problema",
       lblSolution: "Solución",
       lblResult: "Resultado",
+      lblViewProject: "Ver proyecto",
       contactTitle: "¿Tenés un proceso que se hace a mano?",
       contactTitle2: "Hablemos.",
       contactLead:
@@ -125,6 +126,36 @@
             "Menos trabajo manual y errores de carga, con registro de todo lo ejecutado.",
           tech: ["Node.js", "PHP", "Cron", "MySQL", "APIs"],
         },
+        {
+          num: "05",
+          kind: "Proyecto personal",
+          title: "Catálogo multi-tenant con pedidos por WhatsApp",
+          summary:
+            "Sistema propio para que cualquier negocio publique su catálogo y reciba pedidos por WhatsApp, con panel de administración de stock y precios.",
+          problem:
+            "Negocios chicos manejan su catálogo en fotos sueltas de WhatsApp o Instagram, sin stock ni precios centralizados y sin poder delegar la carga.",
+          solution:
+            "API REST en Node/Express con MySQL, multi-tenant (un negocio = un tenant con su propio catálogo y tema visual), más dos frontends en React que consumen esa misma API: catálogo público y panel del vendedor.",
+          result:
+            "El mismo código sirve para negocios muy distintos con solo cambiar la configuración del tenant; el pedido llega armado y listo para enviar por WhatsApp.",
+          tech: ["Node.js", "Express", "MySQL", "React", "JWT"],
+          link: "https://proyectos.emilianonewen.com/catalogo",
+        },
+        {
+          num: "06",
+          kind: "Proyecto personal",
+          title: "Panel de finanzas personales con Mercado Pago",
+          summary:
+            "App que trae pagos y saldo reales de Mercado Pago y los combina con gastos cargados a mano en un solo resumen, exportable a Excel.",
+          problem:
+            "El resumen de Mercado Pago no alcanza para ver el gasto real: falta lo pagado en efectivo o por otros medios, y no hay forma de exportarlo prolijo.",
+          solution:
+            "Next.js (App Router) + TypeScript sobre Postgres/Prisma, con la API de Mercado Pago para traer movimientos reales, login propio con NextAuth y exportación a .xlsx.",
+          result:
+            "Un solo resumen con todo el gasto, real y manual, exportable para llevarlo a donde haga falta.",
+          tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Mercado Pago API"],
+          link: "https://proyectos.emilianonewen.com/finanzas",
+        },
       ],
     },
     en: {
@@ -153,6 +184,7 @@
       lblProblem: "Problem",
       lblSolution: "Solution",
       lblResult: "Outcome",
+      lblViewProject: "View project",
       contactTitle: "Still doing it by hand?",
       contactTitle2: "Let's talk.",
       contactLead:
@@ -245,6 +277,36 @@
           result:
             "Less manual work and fewer data-entry errors, with a full log of every run.",
           tech: ["Node.js", "PHP", "Cron", "MySQL", "APIs"],
+        },
+        {
+          num: "05",
+          kind: "Personal project",
+          title: "Multi-tenant catalog with WhatsApp ordering",
+          summary:
+            "A self-initiated system for any small business to publish its catalog and take orders over WhatsApp, with an admin panel for stock and pricing.",
+          problem:
+            "Small businesses manage their catalog through loose WhatsApp or Instagram photos, with no centralized stock or pricing and no way to delegate the work.",
+          solution:
+            "A multi-tenant Node/Express REST API on MySQL (one business = one tenant with its own catalog and visual theme), plus two React frontends hitting that same API: the public catalog and the seller's admin panel.",
+          result:
+            "The same codebase serves very different businesses just by changing the tenant config; orders arrive ready-formatted to send straight over WhatsApp.",
+          tech: ["Node.js", "Express", "MySQL", "React", "JWT"],
+          link: "https://proyectos.emilianonewen.com/catalogo",
+        },
+        {
+          num: "06",
+          kind: "Personal project",
+          title: "Personal finance dashboard powered by Mercado Pago",
+          summary:
+            "An app that pulls real payments and balance from Mercado Pago and combines them with manually entered expenses into one summary, exportable to Excel.",
+          problem:
+            "Mercado Pago's own statement isn't enough to see real spending: it misses cash or other payment methods, and there's no clean way to export it.",
+          solution:
+            "Next.js (App Router) + TypeScript on Postgres/Prisma, pulling real transactions via the Mercado Pago API, with its own NextAuth login and .xlsx export.",
+          result:
+            "One single summary covering all spending, real and manual, exportable wherever it's needed.",
+          tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Mercado Pago API"],
+          link: "https://proyectos.emilianonewen.com/finanzas",
         },
       ],
     },
@@ -346,6 +408,14 @@
         techRow.appendChild(el("span", "tech-pill", tech));
       });
       left.appendChild(techRow);
+      if (p.link) {
+        var link = el("a", "project-link accent-text mono");
+        link.href = p.link;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = t.lblViewProject + " ↗";
+        left.appendChild(link);
+      }
       grid.appendChild(left);
 
       var right = el("div", "project-psr");

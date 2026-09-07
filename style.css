@@ -390,6 +390,14 @@ a:hover { color: var(--accent); }
   font-size: 11.5px;
   color: var(--muted-2);
 }
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  font-size: 12.5px;
+  letter-spacing: .02em;
+}
 .project-psr { display: grid; gap: 8px; align-content: start; }
 .psr-block { padding: 16px 18px; background: var(--panel); border-radius: 14px; }
 .psr-block.result { background: rgba(var(--accent-rgb), .07); }
