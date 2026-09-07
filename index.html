@@ -21,7 +21,12 @@
         <span class="dot pulse"></span>
         <span>Emiliano Newen</span>
       </a>
-      <nav class="nav">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-controls="siteNav" aria-expanded="false">
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+      </button>
+      <nav class="nav" id="siteNav">
         <a href="#about" data-i18n="navAbout">Sobre mí</a>
         <a href="#process" data-i18n="navProcess">Cómo trabajo</a>
         <a href="#work" data-i18n="navWork">Proyectos</a>
@@ -32,6 +37,7 @@
         </div>
       </nav>
     </div>
+    <div class="nav-scrim" id="navScrim"></div>
   </header>
 
   <section id="top" class="hero">
