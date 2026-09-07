@@ -16,7 +16,6 @@
         "Analizo cómo trabajás, lo digitalizo y lo automatizo. Aplicaciones web, APIs y sistemas internos que corren en producción todos los días.",
       ctaWork: "Ver proyectos",
       ctaContact: "Hablemos",
-      canvasHint: "movés el mouse, los nodos reaccionan",
       aboutTitle:
         "No hago sitios web: desarrollo sistemas que la gente usa para trabajar.",
       aboutP1:
@@ -140,7 +139,6 @@
         "I analyze how you work, digitize it and automate it. Web apps, APIs and internal systems running in production every day.",
       ctaWork: "See projects",
       ctaContact: "Get in touch",
-      canvasHint: "move your mouse, the nodes react",
       aboutTitle: "I don't build websites — I build systems people work with.",
       aboutP1:
         "I'm a Systems Analyst and semi-senior Full Stack developer. Since 2022 I've been building and maintaining internal software at DM Group (Bahía Blanca): admin systems, third-party integrations and automations that keep daily operations running.",
