@@ -36,6 +36,8 @@
       lblSolution: "Solución",
       lblResult: "Resultado",
       lblViewProject: "Ver proyecto",
+      lblReadMore: "Leer más",
+      lblReadLess: "Leer menos",
       contactTitle: "¿Tenés un proceso que se hace a mano?",
       contactTitle2: "Hablemos.",
       contactLead:
@@ -231,6 +233,8 @@
       lblSolution: "Solution",
       lblResult: "Outcome",
       lblViewProject: "View project",
+      lblReadMore: "Read more",
+      lblReadLess: "Read less",
       contactTitle: "Still doing it by hand?",
       contactTitle2: "Let's talk.",
       contactLead:
@@ -467,7 +471,7 @@
       var card = el("div", "step-card");
       card.appendChild(el("div", "step-num", s.n));
       card.appendChild(el("h3", null, s.title));
-      card.appendChild(el("p", null, s.body));
+      card.appendChild(el("p", "js-collapsible", s.body));
       list.appendChild(card);
     });
   }
@@ -486,7 +490,7 @@
       meta.appendChild(el("span", "kind", p.kind));
       left.appendChild(meta);
       left.appendChild(el("h3", null, p.title));
-      left.appendChild(el("p", "project-summary", p.summary));
+      left.appendChild(el("p", "project-summary js-collapsible", p.summary));
       var techRow = el("div", "tech-row");
       p.tech.forEach(function (tech) {
         techRow.appendChild(el("span", "tech-pill", tech));
@@ -505,13 +509,13 @@
       var right = el("div", "project-psr");
       var problem = el("div", "psr-block");
       problem.appendChild(el("div", "psr-label", t.lblProblem));
-      problem.appendChild(el("div", "psr-value", p.problem));
+      problem.appendChild(el("div", "psr-value js-collapsible", p.problem));
       var solution = el("div", "psr-block");
       solution.appendChild(el("div", "psr-label", t.lblSolution));
-      solution.appendChild(el("div", "psr-value", p.solution));
+      solution.appendChild(el("div", "psr-value js-collapsible", p.solution));
       var result = el("div", "psr-block result");
       result.appendChild(el("div", "psr-label", t.lblResult));
-      result.appendChild(el("div", "psr-value", p.result));
+      result.appendChild(el("div", "psr-value js-collapsible", p.result));
       right.appendChild(problem);
       right.appendChild(solution);
       right.appendChild(result);
@@ -542,7 +546,7 @@
 
       var body = el("div", "gallery-body");
       body.appendChild(el("h3", "gallery-title", item.title));
-      body.appendChild(el("p", "gallery-desc", item.desc));
+      body.appendChild(el("p", "gallery-desc js-collapsible", item.desc));
       var link = el("span", "gallery-link");
       link.textContent = t.lblViewProject + " ↗";
       body.appendChild(link);
@@ -550,6 +554,37 @@
 
       track.appendChild(card);
     });
+  }
+
+  function setupReadMore() {
+    var isMobile = window.matchMedia("(max-width: 760px)").matches;
+    var t = COPY[state.lang];
+    document.querySelectorAll(".js-collapsible").forEach(function (textEl) {
+      var btn = textEl.nextElementSibling;
+      if (btn && btn.classList.contains("read-more-btn")) btn.remove();
+      textEl.classList.remove("is-expanded");
+
+      if (!isMobile) return;
+      if (textEl.scrollHeight - textEl.clientHeight <= 2) return;
+
+      var readMoreBtn = document.createElement("button");
+      readMoreBtn.type = "button";
+      readMoreBtn.className = "read-more-btn";
+      readMoreBtn.textContent = t.lblReadMore;
+      readMoreBtn.addEventListener("click", function () {
+        var expanded = textEl.classList.toggle("is-expanded");
+        readMoreBtn.textContent = expanded ? t.lblReadLess : t.lblReadMore;
+      });
+      textEl.insertAdjacentElement("afterend", readMoreBtn);
+    });
+  }
+
+  function debounce(fn, wait) {
+    var timer;
+    return function () {
+      clearTimeout(timer);
+      timer = setTimeout(fn, wait);
+    };
   }
 
   function setupCarousel() {
@@ -614,6 +649,7 @@
     renderSteps(t);
     renderProjects(t);
     renderGallery(t);
+    setupReadMore();
   }
 
   function setupLangToggle() {
@@ -881,5 +917,6 @@
     setupCanvas();
     setupContactForm();
     setupCarousel();
+    window.addEventListener("resize", debounce(setupReadMore, 200));
   });
 })();

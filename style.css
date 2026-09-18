@@ -566,6 +566,31 @@ a:hover { color: var(--accent); }
 }
 .gallery-card:hover .gallery-link { text-decoration: underline; }
 
+/* read more (mobile text collapse) */
+.read-more-btn {
+  display: none;
+  margin: 4px 0 12px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  cursor: pointer;
+}
+.read-more-btn:hover { text-decoration: underline; }
+
+@media (max-width: 760px) {
+  .js-collapsible:not(.is-expanded) {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .read-more-btn { display: inline-flex; }
+}
+
 /* stack */
 .stack-grid {
   display: grid;
