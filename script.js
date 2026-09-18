@@ -163,37 +163,37 @@
       ],
       gallery: [
         {
-          img: "cuaderno",
+          img: "cuaderno.jpg",
           title: "Cuaderno matemático",
           desc: "Cuaderno digital de matemática: escribís a mano y un panel te ayuda paso a paso.",
           link: "https://proyectos.emilianonewen.com/cuaderno",
         },
         {
-          img: "taller",
+          img: "taller.jpg",
           title: "Taller mecánico",
           desc: "Turnos, stock y trabajos para el taller, más un portal donde el cliente sigue su vehículo.",
           link: "https://proyectos.emilianonewen.com/taller",
         },
         {
-          img: "carola",
+          img: "carola.jpg",
           title: "Transporte Carola",
           desc: "Landing de una empresa de logística: servicios, flota y cotización por WhatsApp.",
           link: "https://proyectos.emilianonewen.com/transporteCarola",
         },
         {
-          img: "cantina",
+          img: "cantina.webp",
           title: "Control 3T — Cantina del club",
           desc: "App para el tercer tiempo del rugby, sincronizada en vivo entre varios celulares.",
           link: "https://proyectos.emilianonewen.com/cantina3T",
         },
         {
-          img: "catalogo",
+          img: "catalogo.jpg",
           title: "Catálogo + Panel de vendedor",
           desc: "Catálogo multi-negocio con pedido por WhatsApp y panel propio para cada vendedor.",
           link: "https://proyectos.emilianonewen.com/catalogo",
         },
         {
-          img: "finanzas",
+          img: "finanzas.jpg",
           title: "Finanzas MP",
           desc: "Conecta Mercado Pago, categoriza gastos y exporta todo a Excel.",
           link: "https://proyectos.emilianonewen.com/finanzas",
@@ -357,37 +357,37 @@
       ],
       gallery: [
         {
-          img: "cuaderno",
+          img: "cuaderno.jpg",
           title: "Math notebook",
           desc: "A digital math notebook: write by hand and a side panel guides you step by step.",
           link: "https://proyectos.emilianonewen.com/cuaderno",
         },
         {
-          img: "taller",
+          img: "taller.jpg",
           title: "Auto shop management",
           desc: "Appointments, stock and jobs for the shop, plus a portal where customers track their vehicle.",
           link: "https://proyectos.emilianonewen.com/taller",
         },
         {
-          img: "carola",
+          img: "carola.jpg",
           title: "Transporte Carola",
           desc: "Landing page for a freight logistics company: services, fleet and WhatsApp quoting.",
           link: "https://proyectos.emilianonewen.com/transporteCarola",
         },
         {
-          img: "cantina",
+          img: "cantina.webp",
           title: "Control 3T — Club canteen",
           desc: "An app for rugby's third half, synced live across several phones.",
           link: "https://proyectos.emilianonewen.com/cantina3T",
         },
         {
-          img: "catalogo",
+          img: "catalogo.jpg",
           title: "Catalog + seller panel",
           desc: "Multi-business catalog with WhatsApp ordering and its own panel for each seller.",
           link: "https://proyectos.emilianonewen.com/catalogo",
         },
         {
-          img: "finanzas",
+          img: "finanzas.jpg",
           title: "Finanzas MP",
           desc: "Connects to Mercado Pago, categorizes spending and exports everything to Excel.",
           link: "https://proyectos.emilianonewen.com/finanzas",
@@ -534,7 +534,7 @@
 
       var thumb = el("div", "gallery-thumb");
       var img = document.createElement("img");
-      img.src = "images/gallery/" + item.img + ".jpg";
+      img.src = "images/gallery/" + item.img;
       img.alt = item.title;
       img.loading = "lazy";
       thumb.appendChild(img);
