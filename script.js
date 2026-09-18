@@ -28,6 +28,10 @@
       stackTitle: "Con qué construyo",
       workNote: "// casos seleccionados",
       workMoreLabel: "Ver más proyectos personales →",
+      moreWorkEyebrow: "Más proyectos",
+      moreWorkTitle: "La galería completa",
+      moreWorkLead:
+        "Estos son solo algunos casos. En proyectos.emilianonewen.com está la galería entera — cada proyecto se puede abrir y probar en vivo.",
       lblProblem: "Problema",
       lblSolution: "Solución",
       lblResult: "Resultado",
@@ -157,6 +161,44 @@
           link: "https://proyectos.emilianonewen.com/finanzas",
         },
       ],
+      gallery: [
+        {
+          img: "cuaderno",
+          title: "Cuaderno matemático",
+          desc: "Cuaderno digital de matemática: escribís a mano y un panel te ayuda paso a paso.",
+          link: "https://proyectos.emilianonewen.com/cuaderno",
+        },
+        {
+          img: "taller",
+          title: "Taller mecánico",
+          desc: "Turnos, stock y trabajos para el taller, más un portal donde el cliente sigue su vehículo.",
+          link: "https://proyectos.emilianonewen.com/taller",
+        },
+        {
+          img: "carola",
+          title: "Transporte Carola",
+          desc: "Landing de una empresa de logística: servicios, flota y cotización por WhatsApp.",
+          link: "https://proyectos.emilianonewen.com/transporteCarola",
+        },
+        {
+          img: "cantina",
+          title: "Control 3T — Cantina del club",
+          desc: "App para el tercer tiempo del rugby, sincronizada en vivo entre varios celulares.",
+          link: "https://proyectos.emilianonewen.com/cantina3T",
+        },
+        {
+          img: "catalogo",
+          title: "Catálogo + Panel de vendedor",
+          desc: "Catálogo multi-negocio con pedido por WhatsApp y panel propio para cada vendedor.",
+          link: "https://proyectos.emilianonewen.com/catalogo",
+        },
+        {
+          img: "finanzas",
+          title: "Finanzas MP",
+          desc: "Conecta Mercado Pago, categoriza gastos y exporta todo a Excel.",
+          link: "https://proyectos.emilianonewen.com/finanzas",
+        },
+      ],
     },
     en: {
       navAbout: "About",
@@ -181,6 +223,10 @@
       stackTitle: "What I build with",
       workNote: "// selected cases",
       workMoreLabel: "See more personal projects →",
+      moreWorkEyebrow: "More projects",
+      moreWorkTitle: "The full gallery",
+      moreWorkLead:
+        "These are just a few cases. The full gallery lives at proyectos.emilianonewen.com — every project can be opened and tried live.",
       lblProblem: "Problem",
       lblSolution: "Solution",
       lblResult: "Outcome",
@@ -306,6 +352,44 @@
           result:
             "One single summary covering all spending, real and manual, exportable wherever it's needed.",
           tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Mercado Pago API"],
+          link: "https://proyectos.emilianonewen.com/finanzas",
+        },
+      ],
+      gallery: [
+        {
+          img: "cuaderno",
+          title: "Math notebook",
+          desc: "A digital math notebook: write by hand and a side panel guides you step by step.",
+          link: "https://proyectos.emilianonewen.com/cuaderno",
+        },
+        {
+          img: "taller",
+          title: "Auto shop management",
+          desc: "Appointments, stock and jobs for the shop, plus a portal where customers track their vehicle.",
+          link: "https://proyectos.emilianonewen.com/taller",
+        },
+        {
+          img: "carola",
+          title: "Transporte Carola",
+          desc: "Landing page for a freight logistics company: services, fleet and WhatsApp quoting.",
+          link: "https://proyectos.emilianonewen.com/transporteCarola",
+        },
+        {
+          img: "cantina",
+          title: "Control 3T — Club canteen",
+          desc: "An app for rugby's third half, synced live across several phones.",
+          link: "https://proyectos.emilianonewen.com/cantina3T",
+        },
+        {
+          img: "catalogo",
+          title: "Catalog + seller panel",
+          desc: "Multi-business catalog with WhatsApp ordering and its own panel for each seller.",
+          link: "https://proyectos.emilianonewen.com/catalogo",
+        },
+        {
+          img: "finanzas",
+          title: "Finanzas MP",
+          desc: "Connects to Mercado Pago, categorizes spending and exports everything to Excel.",
           link: "https://proyectos.emilianonewen.com/finanzas",
         },
       ],
@@ -438,6 +522,63 @@
     });
   }
 
+  function renderGallery(t) {
+    var track = document.getElementById("galleryTrack");
+    if (!track) return;
+    track.innerHTML = "";
+    t.gallery.forEach(function (item) {
+      var card = el("a", "gallery-card");
+      card.href = item.link;
+      card.target = "_blank";
+      card.rel = "noopener";
+
+      var thumb = el("div", "gallery-thumb");
+      var img = document.createElement("img");
+      img.src = "images/gallery/" + item.img + ".jpg";
+      img.alt = item.title;
+      img.loading = "lazy";
+      thumb.appendChild(img);
+      card.appendChild(thumb);
+
+      var body = el("div", "gallery-body");
+      body.appendChild(el("h3", "gallery-title", item.title));
+      body.appendChild(el("p", "gallery-desc", item.desc));
+      var link = el("span", "gallery-link");
+      link.textContent = t.lblViewProject + " ↗";
+      body.appendChild(link);
+      card.appendChild(body);
+
+      track.appendChild(card);
+    });
+  }
+
+  function setupCarousel() {
+    var track = document.getElementById("galleryTrack");
+    var prev = document.getElementById("carouselPrev");
+    var next = document.getElementById("carouselNext");
+    if (!track || !prev || !next) return;
+
+    function step() {
+      var card = track.querySelector(".gallery-card");
+      var gap = 20;
+      return card ? card.getBoundingClientRect().width + gap : 300;
+    }
+    function updateButtons() {
+      prev.disabled = track.scrollLeft <= 4;
+      next.disabled =
+        track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+    }
+    prev.addEventListener("click", function () {
+      track.scrollBy({ left: -step(), behavior: "smooth" });
+    });
+    next.addEventListener("click", function () {
+      track.scrollBy({ left: step(), behavior: "smooth" });
+    });
+    track.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+  }
+
   function renderStack() {
     var list = document.getElementById("stackList");
     if (list.childElementCount) return;
@@ -472,6 +613,7 @@
     renderFacts(t);
     renderSteps(t);
     renderProjects(t);
+    renderGallery(t);
   }
 
   function setupLangToggle() {
@@ -738,5 +880,6 @@
     setupReveal();
     setupCanvas();
     setupContactForm();
+    setupCarousel();
   });
 })();
