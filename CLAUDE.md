@@ -145,3 +145,10 @@ Flujo completo, cliente → servidor:
 - Antes de tocar `phpmailer/`, recordar que es una copia vendorizada a mano (no vía Composer) —
   no asumir que hay un `composer.json`/autoloader para actualizarla; reemplazar los archivos
   fuente directamente si hace falta actualizar de versión.
+- **`style.css` y `script.js` se referencian desde `index.html` con un query string
+  `?v=YYYYMMDD`** (ej. `script.js?v=20260918`) porque el CDN de Hostinger (`hcdn`) y los
+  navegadores cachean esos dos archivos con `Cache-Control: max-age=604800` (7 días) — sin el
+  cache-busting, un usuario que ya visitó el sitio puede seguir viendo el JS/CSS viejo durante
+  días después de un deploy nuevo, aunque `index.html` (que no se cachea igual) ya muestre el
+  markup actualizado. Cualquier cambio a `style.css` o `script.js` tiene que venir acompañado de
+  bumpear ese `?v=` en `index.html`, o el deploy no se ve hasta que expire el cache.
